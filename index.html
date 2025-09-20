@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <div class="controls">
+      <select id="statusFilter">
+        <option value="All">All</option>
+        <option value="Active">Active</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search description..." />
+      <button onclick="openForm()">Add Task</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Description</th>
+          <th>Priority</th>
+          <th>Due Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskTable"></tbody>
+    </table>
+
+    <div id="taskForm" class="modal">
+      <div class="modal-content">
+        <h2>Add/Edit Task</h2>
+        <input type="text" id="taskDescription" placeholder="Description" />
+        <select id="taskStatus">
+          <option value="Active">Active</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <select id="taskPriority">
+          <option value="High Priority">High Priority</option>
+          <option value="Low Priority">Low Priority</option>
+        </select>
+        <input type="date" id="taskDueDate" />
+        <button onclick="saveTask()">Save</button>
+        <button onclick="closeForm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
