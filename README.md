@@ -1,7 +1,5 @@
 # taskmanager
 ---
-LINK PREVOEW:
-file:///C:/Users/tnase/OneDrive/Documents/taskmanager0/index.html
 
 📋 Task Manager
 
